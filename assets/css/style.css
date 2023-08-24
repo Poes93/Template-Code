@@ -132,6 +132,30 @@ nav {
 
 }
 
+#reasons {
+    width: 90%;
+    margin-top: 20px auto;
+}
+
+#reasons h2 {
+    text-size: 280%;
+    text-align: center;
+    margin: 20px;
+}
+
+#benefits-physical>div,#benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+hr {
+    border-top: 1px solid #3a3a3a
+    margin: 5px 0;
+}
 /* Media quary tablets and larger*/
 @media screen and (min-width: 768px) {
     nav {
