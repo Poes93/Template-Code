@@ -19,7 +19,7 @@
         <a href="index.html">
             <h1 id="logo">Love Running</h1>
         </a>
-        <input type="checkbox" id="nav-toggle" name="nav-toggle" />
+        <input type="checkbox" id="nav-toggle" name="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">
             <i class="fa-solid fa-bars"></i>
         </label>
@@ -30,12 +30,54 @@
                 <li><a href="signup.html" class="active">Sign Up</a></li>
             </ul>
         </nav>
-
-
     </header>
+    <main>
+        <section id="signup">
+            <form id="signup-form" method="post" action="https://formdump.codeinstitute.net">
+
+            <h2><i class="fa-solid fa-heart-pulse"></i> Let's get you signed up!</h2>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" class="text-input" id="first_name" required>
+<br>
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" class="text-input" id="last_name" required>
+
+            <br>
+            <label for="email_address">Email Address</label>
+            <input type="email" name="email_address" class="text-input" id="email_address" required>
+
+            <br>
+            <div id="radio-buttons">
+                <div>
+                    <label for="road">Road</label>
+                    <input type="radio" name="running_preference" id="road" value="road" required checked>
+                </div>
+                <div>
+            
+                    <label for="trail">Trail</label>
+                    <input type="radio" name="running_preference" id="trail" value="trail">
+            
+                </div>
+                <div>
+                    <label for="both">Both</label>
+                    <input type="radio" name="running_preference" id="both" value="both">
+                </div>
+            
+            </div>
+            <div>
+                <button type="submit" class="join-button">Let's Run!</button>
+            
+            </div>
+
+        </form>
 
 
-    <main>Main</main>
+        </section>
+
+
+
+
+    </main>
     <footer>
         <ul id="social-networks">
             <li>
