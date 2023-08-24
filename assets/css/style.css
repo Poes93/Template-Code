@@ -80,17 +80,16 @@ nav {
     top:100%;
 }
 
-/* Nav Toggle */
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
 
-#nav-toggle{
-    display:none;
-
+#nav-toggle {
+    display: none;
 }
 
-.nav-toggle-label{
+.nav-toggle-label {
     font-size: 2rem;
 }
 /* Media quary tablets and larger*/
@@ -106,6 +105,13 @@ nav {
     
 }
 
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+    
+}
+
 #menu {
     display: flex;
 }
@@ -116,4 +122,17 @@ nav {
     
 .nav-toggle-label {
     display: none;
+}
+
+#logo {
+    font-size: 280%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+}
+
+main {
+
+    /*push main containt down to make room for larger header*/
+    margin-top: 79px;
+
 }
