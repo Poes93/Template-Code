@@ -182,7 +182,7 @@ main {
     flex-basis: 200px;
     flex-grow: 1;
     /* Creates a grid of meetup time divs over the background image */
-     border: 2px solid white; 
+    border: 2px solid white;
 }
 
 #times h3 {
@@ -201,6 +201,7 @@ main {
 #photos {
     line-height: 0;
 }
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -246,6 +247,14 @@ main {
         margin: 0 0.5rem;
     }
 
+    /* Large devices (large or landscape screens, 576px and up) */
+    @media screen and (min-width: 576px) {
+        #photos {
+            column-count: 2;
+            column-gap: 0;
+        }
+    }
+
     /* Main content */
     main {
         /* Push main content down to accommodate larger header */
@@ -275,7 +284,17 @@ main {
         text-align: end;
         align-self: flex-end;
     }
+
+    #photos {
+        column-count: 3;
+
+    }
+
+
 }
+
+
+
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
@@ -284,14 +303,15 @@ main {
     }
 }
 
-@media screen and (min-width: 1200px) {    
+@media screen and (min-width: 1200px) {
+
     /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
     }
 
-    #benefits > div {
+    #benefits>div {
         flex: 1;
     }
 
@@ -303,11 +323,11 @@ main {
         order: 1;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         align-self: flex-start;
     }
 
-    #benefits-physical > div {
+    #benefits-physical>div {
         align-self: flex-end;
     }
 }
