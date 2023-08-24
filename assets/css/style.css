@@ -44,6 +44,7 @@ h1 {
 main { /* makes footer go down */
     background-color: lightblue;
     flex: 1 0 auto; 
+    margin-top: 47px;
 }
 
 footer {
@@ -65,26 +66,54 @@ footer {
 }
 /*Navbar style drop down menu*/
 nav {
-    position: absolute;
+
+    position:absolute;
     background-color: #ffffff;
     width: 100%;
-    left: 0;   
+    left:0;
     box-shadow: 0 2px 2px #3a3a3a;
     padding: 0 1rem;
+    /*This is how you can hide the nav bar before you click on it*/
     display: none;
-    top: 100%;
+    /*in order to not getting your navbar in front of your title. this tells nav to
+    start at the bottom of the parent element 0% is on top, 100% is on the bottom*/
+    top:100%;
 }
 
-/* nav toggle*/
-
+/* Nav Toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
 
-#nav-toggle {
-    diplay: none;
+#nav-toggle{
+    display:none;
+
 }
 
-.nav-toggle-label {
+.nav-toggle-label{
     font-size: 2rem;
+}
+/* Media quary tablets and larger*/
+@media screen and (min-width: 768px) {
+    nav {
+        display: block;
+        position: relative; 
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+
+    }
+    
+}
+
+#menu {
+    display: flex;
+}
+
+#menu > li {
+    padding-left: 1rem;
+}
+    
+.nav-toggle-label {
+    display: none;
 }
