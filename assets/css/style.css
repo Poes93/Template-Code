@@ -1,28 +1,33 @@
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-
-
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Generic project styles */
     color: #3a3a3a;
-    font-family: 'lato', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
 
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -40,54 +45,6 @@ header a {
     color: inherit;
 }
 
-
-
-main {
-    /* makes footer go down */
-    flex: 1 0 auto;
-    margin-top: 47px;
-}
-
-/* Hero section Header picture */
-
-#hero {
-    height: 600px;
-    width: 100%;
-    background: url(../images/hero-image.webp) no-repeat center center/cover;
-    position: relative;
-}
-
-#cover-text {
-    background-color: rgba(241, 109, 107, .7);
-    font-size: 130%;
-    position: absolute;
-    bottom: 30px;
-    width: 80%;
-    min-height: 200px;
-    padding-top: 40px;
-    padding-left: 10px;
-}
-
-#cover-text > h2, #cover-text > h3 {
-    color: #ffffff;
-}
-
-
-#social-networks {
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-#social-networks i {
-    font-size: 160%;
-    padding: 5%;
-    color: #3a3a3a;
-
-}
-
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
@@ -102,19 +59,15 @@ main {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/*Navbar style drop down menu*/
+/* Navbar styles with dropdown toggle */
 nav {
-
     position: absolute;
     background-color: #ffffff;
     width: 100%;
     left: 0;
-    box-shadow: 0 2px 2px #3a3a3a;
     padding: 0 1rem;
-    /*This is how you can hide the nav bar before you click on it*/
+    box-shadow: 0 2px 2px #3a3a3a;
     display: none;
-    /*in order to not getting your navbar in front of your title. this tells nav to
-    start at the bottom of the parent element 0% is on top, 100% is on the bottom*/
     top: 100%;
 }
 
@@ -127,23 +80,56 @@ nav {
     display: none;
 }
 
-#nav-toggle-label {
+.nav-toggle-label {
     font-size: 2rem;
-
 }
 
+/* Main content */
+main {
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
+
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
+}
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
+}
+
+/* Reasons section */
 #reasons {
     width: 90%;
-    margin-top: 20px auto;
+    margin: 20px auto;
 }
 
 #reasons h2 {
-    text-size: 280%;
+    margin-bottom: 20px;
     text-align: center;
-    margin: 20px;
+    font-size: 280%;
 }
 
-#benefits-physical>div,#benefits-mental>div {
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -152,23 +138,20 @@ nav {
     padding: 0 20px;
 }
 
-hr {
-    border-top: 1px solid #3a3a3a
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
 
-
-
 #circle-cover-bg {
-    background: url(../images/reasons-image.webp) no-repeat top center/cover;
-    margin-bottom: 20px;
-    width: 90vw;
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
-    /*makes a circle*/
+    width: 90vw;
+    margin-bottom: 20px;
+    /* Makes the square image into a circle */
     border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
-
 }
 
 #benefits-image {
@@ -177,15 +160,31 @@ hr {
     justify-content: center;
 }
 
-/* Media quary tablets and larger*/
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
+    /* Header */
     nav {
         display: block;
         position: relative;
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-
     }
 
     #menu {
@@ -198,7 +197,6 @@ hr {
 
     .nav-toggle-label {
         display: none;
-
     }
 
     #logo {
@@ -207,75 +205,69 @@ hr {
         margin: 0 0.5rem;
     }
 
+    /* Main content */
     main {
-
-        /*push main containt down to make room for larger header*/
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
-
     }
 
-    /*Hero text*/
+    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
-        
-        
     }
-}
 
-#benefits-physical, 
-#benefits-mental {
-    display: flex;
+    /* Reasons section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
         flex-direction: column;
         width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
 }
 
-#benefits-physical > div, 
-#benefits-mental > div {
-    width: 75%;
-
-}
-
-#benefits-mental > div {
-    text-align: end;
-    align-self: flex-end;
-
-}
-
-
-
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-
 }
 
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
-    }    
+    }
 
     #benefits > div {
         flex: 1;
     }
 
     #benefits-image {
-        order: 0;
+        order: 0
     }
 
     #benefits-mental {
         order: 1;
     }
 
-    #benefits-physical > div {
+    #benefits-mental > div {
         align-self: flex-start;
-
     }
 
-    #benefits-mental > div {
+    #benefits-physical > div {
         align-self: flex-end;
     }
 }
