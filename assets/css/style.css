@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 
@@ -13,7 +12,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    color: #3a3a3a; 
+    color: #3a3a3a;
     font-family: 'lato', sans-serif;
 }
 
@@ -36,14 +35,15 @@ header a {
 
 h1 {
     font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;  
+    text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
 
-main { /* makes footer go down */
+main {
+    /* makes footer go down */
     background-color: lightblue;
-    flex: 1 0 auto; 
+    flex: 1 0 auto;
     margin-top: 47px;
 }
 
@@ -59,36 +59,37 @@ main { /* makes footer go down */
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
-    
+
 }
 
 #menu {
-        font-size: 110%;
-        letter-spacing: 4px;
-        list-style-type: none;
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
 }
 
-#menu > li {
-    margin-bottom: 1em; 
+#menu>li {
+    margin-bottom: 1em;
 }
 
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
 /*Navbar style drop down menu*/
 nav {
 
-    position:absolute;
+    position: absolute;
     background-color: #ffffff;
     width: 100%;
-    left:0;
+    left: 0;
     box-shadow: 0 2px 2px #3a3a3a;
     padding: 0 1rem;
     /*This is how you can hide the nav bar before you click on it*/
     display: none;
     /*in order to not getting your navbar in front of your title. this tells nav to
     start at the bottom of the parent element 0% is on top, 100% is on the bottom*/
-    top:100%;
+    top: 100%;
 }
 
 /* Nav toggle */
@@ -102,43 +103,44 @@ nav {
 
 #nav-toggle-label {
     font-size: 2rem;
-    
+
 }
 
 /* Media quary tablets and larger*/
 @media screen and (min-width: 768px) {
     nav {
         display: block;
-        position: relative; 
+        position: relative;
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
 
     }
+
     #menu {
         display: flex;
     }
-    
-    #menu > li {
+
+    #menu>li {
         padding-left: 1rem;
     }
-        
+
     .nav-toggle-label {
         display: none;
-        
+
     }
-    
+
     #logo {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
-    
+
     main {
-    
+
         /*push main containt down to make room for larger header*/
         margin-top: 79px;
-    
+
     }
 }
 
@@ -146,6 +148,5 @@ nav {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-    
-}
 
+}
